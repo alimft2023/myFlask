@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+Index
+{% endblock %}
+
+{% block bg_color %}lightgreen{% endblock %}
+
+{% block content %}
+
+{% for student in  students %}
+<a href="{{ url_for('details',id=student.id) }}"><h1> {{ student.id }}  </h1></a>
+<hr>
+{% endfor %}
+{% endblock %}
